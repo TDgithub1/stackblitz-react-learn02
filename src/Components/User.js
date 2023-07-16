@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const User = () => {
   const [data, setData] = useState({});
@@ -37,6 +37,7 @@ const User = () => {
           <p>{data.body}</p>
         </div>
       ) : null}
+      <Link to="/contact">Back</Link>
     </div>
   );
 };
