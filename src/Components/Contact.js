@@ -22,19 +22,27 @@ const Contact = () => {
   }, []);
 
   return (
-    <div>
-      This is Contact
+    <ContactContainer>
       <div>
-        {mainData?.map(({ id, title }) => (
-          <Link to={`/contact/${id}`} key={id}>
-            <div>
-              <h3>{title}</h3>
-            </div>
-          </Link>
-        ))}
+        This is Contact
+        <div>
+          {mainData?.map(({ id, title }) => (
+            <Link to={`/contact/${id}`} key={id}>
+              <div>
+                <h3>{title}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </ContactContainer>
   );
 };
 
 export default Contact;
+
+const ContactContainer = styled.div`
+
+  color: red;
+
+`;
